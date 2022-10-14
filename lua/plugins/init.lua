@@ -173,6 +173,8 @@ local plugins = {
   ["kyazdani42/nvim-tree.lua"] = {
     ft = "alpha",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+  
+
     config = function()
       require "plugins.configs.nvimtree"
     end,
@@ -203,6 +205,24 @@ local plugins = {
       require("core.utils").load_mappings "whichkey"
     end,
   },
+
+  [ "themercorp/themer.lua"] = {
+    disabled = false,
+--    module = "themer",
+    config = function()
+	    require("themer").setup({
+	      colorscheme = "rose_pine",
+	      styles = {
+	        ["function"] = { style = 'italic' },
+	        functionbuiltin = { style = 'italic' },
+	        variable = { style = 'italic' },
+	        variableBuiltIn = { style = 'italic' },
+	        parameter  = { style = 'italic' },
+	      },
+	    })
+    end
+  }
+
 }
 
 -- Load all plugins
