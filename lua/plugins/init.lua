@@ -152,7 +152,7 @@ local plugins = {
 
   ["goolord/alpha-nvim"] = {
     after = "base46",
-    disable = true,
+    disable = false,
     config = function()
       require "plugins.configs.alpha"
     end,
@@ -193,7 +193,7 @@ local plugins = {
 
   -- Only load whichkey after all the gui
   ["folke/which-key.nvim"] = {
-    disable = true,
+    disable = false,
     module = "which-key",
     keys = { "<leader>", '"', "'", "`" },
     config = function()
@@ -256,8 +256,19 @@ local plugins = {
         extensions = {}
       }
     end
-  }
+  },
   --]]
+
+  ["Pocco81/TrueZen.nvim"] = {
+    cmd = "abc"
+  },
+
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+      after = "nvim-lspconfig",
+      config = function()
+         require "plugins.configs.null-ls"
+      end,
+  }
 }
 
 -- Load all plugins
