@@ -1,6 +1,5 @@
 -- this config has issues and is loaded directly within plugin load
-local lualine = pcall(require, 'lualine')
-lualine.setup{
+require("lualine").setup{
   options = {
     icons_enabled = true,
     theme = 'auto',
