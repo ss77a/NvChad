@@ -41,11 +41,13 @@
           },
           -- callback where you can add custom code when the Zen window opens
           on_open = function(win)
-            vim.fn.TwilightEnable()
+            --Call = vim.fn.TwilightEnable()
+            vim.cmd("TwilightEnable")
           end,
           -- callback where you can add custom code when the Zen window closes
           on_close = function()
-            vim.fn.TwilightDisable()
+            --Call = vim.fn.TwilightDisable()
+            vim.cmd("TwilightDisable")
           end,
         }
 

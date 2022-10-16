@@ -288,6 +288,32 @@ local plugins = {
     config = function ()
       require "plugins.configs.cinnamon"
     end
+  },
+
+  ["kylechui/nvim-surround"] = {
+    disabled = false,
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require "plugins.configs.surround"
+    end
+  },
+
+  ["jghauser/mkdir.nvim"] = {
+    disabled = false
+  },
+
+  ["windwp/nvim-ts-autotag"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.ts-autotag"
+    end
+  },
+
+  ["p00f/nvim-ts-rainbow"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.ts-rainbow"
+    end
   }
 }
 
