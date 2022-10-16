@@ -314,6 +314,28 @@ local plugins = {
     config = function ()
       require "plugins.configs.ts-rainbow"
     end
+  },
+
+  ["ThePrimeagen/harpoon"] = {
+    disabled = true,
+    config = function ()
+      require "plugins.configs.harpoon"
+    end
+  },
+
+  ["mhartington/formatter.nvim"] = {
+    disabled =false,
+    config = function ()
+      require "plugins.configs.formatter"
+    end
+  },
+
+  ["nvim-treesitter/nvim-treesitter-context"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.ts-context"
+    end
+
   }
 }
 

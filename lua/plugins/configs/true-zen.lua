@@ -35,19 +35,19 @@
             -- - allow_remote_control socket-only
             -- - listen_on unix:/tmp/kitty
             kitty = {
-              enabled = false,
+              enabled = true,
               font = "+4", -- font size increment
             },
           },
           -- callback where you can add custom code when the Zen window opens
           on_open = function(win)
             --Call = vim.fn.TwilightEnable()
-            vim.cmd("TwilightEnable")
+            --vim.cmd("TwilightEnable")
           end,
           -- callback where you can add custom code when the Zen window closes
           on_close = function()
             --Call = vim.fn.TwilightDisable()
-            vim.cmd("TwilightDisable")
+            --vim.cmd("TwilightDisable")
           end,
         }
 
