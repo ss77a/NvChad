@@ -1,8 +1,10 @@
-<h1 align="center">NvChad</h1>
+<h1 align="center">NvC 1.0.4</h1>
 
 <p>added some initial changes and had a nightmare with themes. able to set a desired default theme but need to see specifics of how to do them in nvc</p>
 
 <p>this is untidy use with caution</p>
+
+<p>filetype plugin</p>
 
 <div align="center">
 	<a href="https://nvchad.github.io/">Home</a>
