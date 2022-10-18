@@ -152,7 +152,7 @@ local plugins = {
 
   ["goolord/alpha-nvim"] = {
     after = "base46",
-    disable = true,
+    disable = false,
     config = function()
       require "plugins.configs.alpha"
     end,
@@ -193,7 +193,7 @@ local plugins = {
 
   -- Only load whichkey after all the gui
   ["folke/which-key.nvim"] = {
-    disable = true,
+    disable = false,
     module = "which-key",
     keys = { "<leader>", '"', "'", "`" },
     config = function()
@@ -203,6 +203,98 @@ local plugins = {
       require("core.utils").load_mappings "whichkey"
     end,
   },
+
+  -- added plugins
+
+  ["themercorp/themer.lua"] = {
+    disabled = false,
+    config = function()
+      require "plugins.configs.themer"
+    end
+  },
+
+  ["nvim-lualine/lualine.nvim"] = {
+    disabled = false,
+    config = function()
+     require "plugins.configs.lualine"
+    end
+  },
+
+  ["Pocco81/TrueZen.nvim"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.true-zen"
+    end
+  },
+
+  ["folke/twilight.nvim"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.twilight"
+    end
+  },
+
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+      after = "nvim-lspconfig",
+      config = function()
+         require "plugins.configs.null-ls"
+      end,
+  },
+
+  ["declancm/cinnamon.nvim"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.cinnamon"
+    end
+  },
+
+  ["kylechui/nvim-surround"] = {
+    disabled = false,
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require "plugins.configs.surround"
+    end
+  },
+
+  ["jghauser/mkdir.nvim"] = {
+    disabled = false
+  },
+
+  ["windwp/nvim-ts-autotag"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.ts-autotag"
+    end
+  },
+
+  ["p00f/nvim-ts-rainbow"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.ts-rainbow"
+    end
+  },
+
+  ["ThePrimeagen/harpoon"] = {
+    disabled = true,
+    config = function ()
+      require "plugins.configs.harpoon"
+    end
+  },
+
+  ["mhartington/formatter.nvim"] = {
+    disabled =false,
+    config = function ()
+      require "plugins.configs.formatter"
+    end
+  },
+
+  ["nvim-treesitter/nvim-treesitter-context"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.ts-context"
+    end
+
+  }
 }
 
 -- Load all plugins
