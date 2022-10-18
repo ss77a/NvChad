@@ -94,3 +94,6 @@ local default_providers = {
 for _, provider in ipairs(default_providers) do
   vim.g["loaded_" .. provider .. "_provider"] = 0
 end
+
+-- Do not source the default filetype.vim
+vim.g.did_load_filetypes = 1

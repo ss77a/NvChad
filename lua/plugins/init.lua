@@ -293,7 +293,13 @@ local plugins = {
     config = function ()
       require "plugins.configs.ts-context"
     end
+  },
 
+  ["nathom/filetype.nvim"] = {
+    disabled = false,
+    config = function ()
+      require "plugins.configs.filetype"
+    end
   }
 }
 
